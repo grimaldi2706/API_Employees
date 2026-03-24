@@ -1,5 +1,4 @@
 -- Archivo de configuración inicial para la base de datos MySQL (database.sql)
--- Puedes importarlo en tu gestor (PhpMyAdmin, DBeaver, MySQL Workbench, etc.)
 
 CREATE DATABASE IF NOT EXISTS `employees_db`
   CHARACTER SET = 'utf8mb4'
