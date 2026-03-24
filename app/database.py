@@ -3,11 +3,8 @@ from dotenv import load_dotenv
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 from sqlalchemy.ext.declarative import declarative_base
-
-# Carga explícitamente las variables del archivo .env al entorno de Python (útil si corres el proyecto sin Docker)
 load_dotenv()
 
-# Variables de entorno estrictas (si no existen en el .env, fallará, lo cual es más seguro)
 MYSQL_USER = os.getenv("MYSQL_USER")
 MYSQL_PASSWORD = os.getenv("MYSQL_PASSWORD")
 MYSQL_HOST = os.getenv("MYSQL_HOST")
