@@ -1,0 +1,153 @@
+{
+  "info": {
+    "name": "API Employees (FastAPI + MySQL)",
+    "description": "Colección RESTful completa de las operaciones CRUD con Soft Delete para la Prueba Técnica. Se conecta al puerto 8000.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "1. GET API Heartbeat",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8000/",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8000",
+          "path": [
+            ""
+          ]
+        }
+      }
+    },
+    {
+      "name": "2. CREATE Empleado (POST)",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"nombre\": \"Ana López\",\n    \"email\": \"ana.lopez@example.com\",\n    \"cargo\": \"Desarrolladora Frontend\",\n    \"departamento\": \"Tecnología\",\n    \"salario\": 2500.50\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8000/api/employees",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "employees"
+          ]
+        }
+      }
+    },
+    {
+      "name": "3. LIST Empleados (GET)",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8000/api/employees?page=1&limit=10",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "employees"
+          ],
+          "query": [
+            {
+              "key": "page",
+              "value": "1"
+            },
+            {
+              "key": "limit",
+              "value": "10"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "4. GET Empleado by ID",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8000/api/employees/1",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "employees",
+            "1"
+          ]
+        }
+      }
+    },
+    {
+      "name": "5. UPDATE Empleado (PUT)",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"cargo\": \"Senior Frontend Developer\",\n    \"salario\": 4000.00\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8000/api/employees/1",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "employees",
+            "1"
+          ]
+        }
+      }
+    },
+    {
+      "name": "6. DELETE Empleado (Soft Delete)",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8000/api/employees/1",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "employees",
+            "1"
+          ]
+        }
+      }
+    }
+  ]
+}
